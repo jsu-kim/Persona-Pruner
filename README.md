@@ -26,7 +26,7 @@ Given only a natural-language persona description, Persona-Pruner constructs per
 | Data construction | Included | Rewrite generic instruction data into a target persona voice, score persona divergence, and select high-divergence examples. |
 | FFN pruning export | Included | Apply per-layer keep-index tensors to LLaMA/Qwen-style decoder models and save a smaller HF checkpoint. |
 | Evaluation | Included | Persona-specific/general evaluation files and an OpenAI-judge runner adapted from Persona Vectors. |
-| Large artifacts | Not included | Full checkpoints, learned keep-index tensors, and private experiment outputs should be hosted separately. |
+| Large artifacts | Not included | Full checkpoints, learned keep-index tensors, and large experiment outputs should be hosted separately. |
 
 ## Installation
 

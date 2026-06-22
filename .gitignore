@@ -10,7 +10,6 @@ results/
 outputs/
 exports/
 checkpoints/
-tmp_smoke_*/
 *.pt
 *.pth
 *.safetensors

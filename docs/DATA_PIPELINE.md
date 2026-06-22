@@ -96,7 +96,7 @@ python scripts/score_persona_divergence.py \
   --output scores/user_0_divergence.json
 ```
 
-Higher `divergence_score` means the question is more persona-specific. For quick checks, add `--limit 8`; for the original test-split sampling behavior, add `--shuffle-before-limit --limit 2000`.
+Higher `divergence_score` means the question is more persona-specific. For quick checks, add `--limit 8`; for the paper test-split sampling behavior, add `--shuffle-before-limit --limit 2000`.
 
 ## 4. Select Data
 
