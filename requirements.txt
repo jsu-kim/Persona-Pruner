@@ -1,0 +1,10 @@
+accelerate>=1.7.0
+openai>=1.70.0
+pandas>=2.0.0
+torch>=2.6.0
+tqdm>=4.67.0
+transformers>=4.52.0
+PyYAML>=6.0.0
+
+# Optional for fast 70B rewrite generation:
+# vllm>=0.8.0

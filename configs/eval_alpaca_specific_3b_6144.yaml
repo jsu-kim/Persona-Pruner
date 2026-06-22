@@ -1,0 +1,11 @@
+model_template: "/path/to/persona_pruner_alpaca_user_{user_id}_6144"
+trait_prefix: "persona_alpaca_specific"
+user_ids: "0-9"
+data_dir: "data/eval"
+output_dir: "results/alpaca_specific_3b_6144_deterministic"
+deterministic: true
+seed: 42
+temperature: 1.0
+max_tokens: 2048
+judge_model: "gpt-4o-mini"
+

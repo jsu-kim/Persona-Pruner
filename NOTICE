@@ -1,0 +1,20 @@
+This repository contains Persona-Pruner pruning and evaluation utilities.
+
+The persona evaluation pipeline and data format are adapted from the Persona Vectors repository:
+https://github.com/safety-research/persona_vectors
+
+The OpenAI log-probability judge protocol follows the Persona Vectors evaluation setup, which itself
+credits the Emergent Misalignment codebase for judge functions.
+
+The generic instruction/answer source used for paper experiments was preprocessed from data released
+with Few-Shot Preference Optimization (FSPO), including:
+https://github.com/Asap7772/fewshot-preference-optimization
+https://huggingface.co/datasets/sher222/persona-iterative-responses
+
+This repository references those sources for provenance but does not redistribute their full dataset.
+
+The vLLM rewrite generator is a cleaned, self-contained version of the local `akinator_may`
+`inference_alpaca.py` workflow used for the paper's persona answer rewrites.
+
+Large model checkpoints, training artifacts, and private experiment outputs are intentionally not
+included in this source release.

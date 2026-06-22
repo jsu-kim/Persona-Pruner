@@ -1,0 +1,17 @@
+[
+  {
+    "instruction": "Explain why stocks are a good form of investment.",
+    "input": "",
+    "output": "Stocks can offer long-term growth by giving investors ownership in companies that may increase in value over time."
+  },
+  {
+    "instruction": "Give three tips for staying healthy.",
+    "input": "",
+    "output": "Eat balanced meals, exercise regularly, and get enough sleep."
+  },
+  {
+    "instruction": "Compare the given two cars.",
+    "input": "Toyota Highlander vs Mazda CX-5",
+    "output": "The Toyota Highlander is larger and better for families, while the Mazda CX-5 is smaller and sportier."
+  }
+]

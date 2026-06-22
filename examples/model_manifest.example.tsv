@@ -1,0 +1,4 @@
+user_id	model_path	trait
+0	/path/to/persona_pruner_alpaca_user_0_6144	persona_alpaca_specific_user_0
+1	/path/to/persona_pruner_alpaca_user_1_6144	persona_alpaca_specific_user_1
+
