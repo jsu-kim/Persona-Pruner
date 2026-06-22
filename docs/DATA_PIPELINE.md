@@ -21,7 +21,7 @@ It writes:
 - divergence scores to `runs/persona_pruner_10p/scores/`
 - selected train data to `runs/persona_pruner_10p/selected/`
 
-Rewrite generation uses `scripts/generate_rewrites_vllm.py` by default. This is the cleaned version of the original `akinator_may/inference_alpaca.py` path used for the Llama-70B rewrites. `REWRITE_GPU_IDS` controls `CUDA_VISIBLE_DEVICES`; tensor parallel size defaults to the number of rewrite GPUs unless `REWRITE_TENSOR_PARALLEL_SIZE` is set.
+Rewrite generation uses `scripts/generate_rewrites_vllm.py` by default. `REWRITE_GPU_IDS` controls `CUDA_VISIBLE_DEVICES`; tensor parallel size defaults to the number of rewrite GPUs unless `REWRITE_TENSOR_PARALLEL_SIZE` is set.
 
 For 70B-class rewrite models, keep `PARALLEL_JOBS=1` unless each concurrent generation process gets a separate GPU group. Divergence scoring can still be distributed with `SCORE_GPU_IDS`.
 
@@ -114,8 +114,8 @@ python scripts/select_persona_training_data.py \
 
 The selector stores `selection_scores` alongside `train` and `test`, so the score provenance is visible without changing the conversation format consumed by training/evaluation code.
 
-## Notes From The Original Workspace
+## Provenance Notes
 
-The ICML runs used notebook-generated intermediate files under `persona_vectors/data_generation/npc_alpaca_1223` and divergence scripts under `Ifpruning/scripts`. The current public scripts consolidate that path into CLI steps and keep score sidecars to avoid the provenance ambiguity that can happen when sorted data and score files are separated.
+The public scripts consolidate data construction into CLI steps and keep score sidecars to avoid the provenance ambiguity that can happen when sorted data and score files are separated.
 
 The generic question/answer source was preprocessed from data released with FSPO / Few-Shot Preference Optimization, including `sher222/persona-iterative-responses` on Hugging Face. This repository intentionally treats that dataset as provenance/reference only; the runnable scripts consume a local preprocessed generic instruction JSON/JSONL.

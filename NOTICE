@@ -13,8 +13,5 @@ https://huggingface.co/datasets/sher222/persona-iterative-responses
 
 This repository references those sources for provenance but does not redistribute their full dataset.
 
-The vLLM rewrite generator is a cleaned, self-contained version of the local `akinator_may`
-`inference_alpaca.py` workflow used for the paper's persona answer rewrites.
-
 Large model checkpoints, training artifacts, and private experiment outputs are intentionally not
 included in this source release.

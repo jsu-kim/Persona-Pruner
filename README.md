@@ -96,6 +96,8 @@ For the Alpaca-specific setting, each user's 20 `persona_alpaca_specific` evalua
 
 For 70B-class rewrite models, keep `PARALLEL_JOBS=1` unless each concurrent generation process has a separate GPU group. Set `REWRITE_GPU_IDS=0,2` or similar to choose rewrite GPUs. Set `GENERATOR_BACKEND=hf` to use the simpler Hugging Face generator instead of vLLM.
 
+Rewrite generation is implemented directly in this repository through `scripts/generate_rewrites_vllm.py` and `scripts/generate_rewrites_hf.py`.
+
 ## Data Construction
 
 The input generic instruction file should be JSON or JSONL with Alpaca-style fields:
@@ -201,8 +203,6 @@ docs/
 The evaluation pipeline and data format are adapted from [safety-research/persona_vectors](https://github.com/safety-research/persona_vectors).
 
 The generic instruction data provenance follows FSPO / Few-Shot Preference Optimization, including [Asap7772/fewshot-preference-optimization](https://github.com/Asap7772/fewshot-preference-optimization) and [`sher222/persona-iterative-responses`](https://huggingface.co/datasets/sher222/persona-iterative-responses).
-
-The vLLM rewrite runner is a cleaned, self-contained version of the internal `akinator_may/inference_alpaca.py` workflow used for persona answer rewriting.
 
 ## Citation
 
