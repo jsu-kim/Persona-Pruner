@@ -36,6 +36,8 @@ conda env create -f environment.yml
 conda activate persona-pruner
 ```
 
+The default conda environment targets CUDA 12.8 with PyTorch 2.8+ and includes vLLM for rewrite generation.
+
 Alternatively, use a virtual environment:
 
 ```bash
@@ -44,7 +46,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-For fast rewrite generation with large instruction models:
+If you use the virtualenv path and need fast rewrite generation with large instruction models:
 
 ```bash
 pip install -e ".[rewrite]"
