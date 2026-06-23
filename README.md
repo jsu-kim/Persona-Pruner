@@ -23,17 +23,22 @@ Given only a natural-language persona description, Persona-Pruner constructs per
 
 | Component | Status | Notes |
 | --- | --- | --- |
-| Data construction | Included | Rewrite generic instruction data into a target persona voice, score persona divergence, and select high-divergence examples. |
-| FFN pruning export | Included | Apply per-layer keep-index tensors to LLaMA/Qwen-style decoder models and save a smaller HF checkpoint. |
-| Evaluation | Included | Persona-specific/general evaluation files and an OpenAI-judge runner adapted from Persona Vectors. |
-| Large artifacts | Not included | Full checkpoints, learned keep-index tensors, and large experiment outputs should be hosted separately. |
+| Data construction | Included | Filters a generic instruction-following dataset (Alpaca) and rewrites selected examples into the target persona voice. |
+| Pruning | Included | Learns binary pruning masks for FFN intermediate dimensions and exports structurally pruned checkpoints. |
+| Evaluation | Included | Role-playing evaluation pipeline for the 10 personas from [FSPO / Few-Shot Preference Optimization](https://github.com/Asap7772/fewshot-preference-optimization). |
 
 ## Installation
 
 ```bash
 git clone https://github.com/jsu-kim/Persona-Pruner.git
 cd Persona-Pruner
+conda env create -f environment.yml
+conda activate persona-pruner
+```
 
+Alternatively, use a virtual environment:
+
+```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
