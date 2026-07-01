@@ -4,6 +4,7 @@ Pruning framework for sculpting lightweight role-playing LLMs from a single pers
 
 [![ICML 2026](https://img.shields.io/badge/ICML-2026-blue)](https://icml.cc/)
 [![Paper](https://img.shields.io/badge/arXiv-2606.14695-b31b1b)](https://arxiv.org/abs/2606.14695)
+[![Project Page](https://img.shields.io/badge/Project-Page-0f766e)](https://jsu-kim.github.io/Persona-Pruner/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)](pyproject.toml)
 
 Jinsu Kim<sup>1</sup>, Jihoon Tack<sup>2</sup>, Noah Lee<sup>2</sup>, Jongheon Jeong<sup>1</sup>
