@@ -371,6 +371,7 @@
 
       .method-step figure {
         margin: 0;
+        overflow: auto;
         border-top: 1px solid var(--line);
         background: #ffffff;
       }
@@ -398,6 +399,16 @@
       .figure-shell img {
         width: 100%;
         min-width: 680px;
+      }
+
+      .table-shell img,
+      .method-step img.table-image,
+      .analysis-item img.table-image,
+      .wide img.table-image {
+        width: auto;
+        max-width: none;
+        min-width: 0;
+        height: auto;
       }
 
       .result-notes {
@@ -452,6 +463,7 @@
       .analysis-item figure {
         margin: 0;
         padding: 0;
+        overflow: auto;
         border-top: 1px solid var(--line);
         background: #ffffff;
       }
@@ -662,19 +674,19 @@
           <div class="section-header">
             <div>
               <p class="eyebrow">Method</p>
-              <h2>Persona data first, persona mask second.</h2>
+              <h2>From a single persona description to a role-playing agent.</h2>
             </div>
             <p class="lead">
-              The pipeline converts generic instructions into persona-aligned
-              calibration data, then learns binary FFN masks that preserve
-              persona-critical intermediate channels.
+              Persona-Pruner starts from only a natural-language persona
+              description, synthesizes persona-aligned calibration data, and
+              sculpts a compact sub-network that keeps the target identity.
             </p>
           </div>
 
           <div class="method-grid">
             <article class="method-step">
               <div class="method-copy">
-                <h3>Stage 1: Persona-driven data synthesis</h3>
+                <h3>Stage 1: Turn one persona description into calibration data</h3>
                 <p>
                   Persona-sensitive queries are selected by representation-level
                   divergence from reference personas. A strong LLM then rewrites
@@ -693,7 +705,7 @@
 
             <article class="method-step">
               <div class="method-copy">
-                <h3>Stage 2: Learning-based sub-network discovery</h3>
+                <h3>Stage 2: Sculpt the role-playing agent</h3>
                 <p>
                   Original weights stay frozen while trainable mask scores select
                   top-k FFN intermediate dimensions with a straight-through
@@ -702,6 +714,7 @@
               </div>
               <figure>
                 <img
+                  class="table-image"
                   src="assets/ablation.png"
                   width="746"
                   height="499"
@@ -728,8 +741,9 @@
           </div>
 
           <div class="results-layout">
-            <figure class="figure-shell" aria-label="Main quantitative results">
+            <figure class="figure-shell table-shell" aria-label="Main quantitative results">
               <img
+                class="table-image"
                 src="assets/main-results.png"
                 width="1513"
                 height="1055"
@@ -844,6 +858,7 @@
               </div>
               <figure>
                 <img
+                  class="table-image"
                   src="assets/human-judge.png"
                   width="749"
                   height="376"
@@ -862,6 +877,7 @@
               </div>
               <figure>
                 <img
+                  class="table-image"
                   src="assets/efficiency.png"
                   width="1513"
                   height="392"
